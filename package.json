@@ -2,7 +2,7 @@
     "name": "axios-progress",
     "version": "0.0.1",
     "description": "axios progress",
-    "main": "index.js",
+    "main": "src/index.js",
     "scripts": {
         "build": "webpack --progress",
         "lint": "eslint --ext .js src",

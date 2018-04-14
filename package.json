@@ -1,6 +1,6 @@
 {
     "name": "axios-progress",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "axios progress",
     "main": "src/index.js",
     "scripts": {
@@ -17,6 +17,9 @@
             ]
         }
     },
+    "dependencies": {
+        "nprogress": "0.2.0"
+    },
     "devDependencies": {
         "babel-core": "^6.26.0",
         "babel-loader": "^7.1.2",
@@ -32,7 +35,6 @@
         "lint-staged": "^3.6.1",
         "css-loader": "^0.28.7",
         "extract-text-webpack-plugin": "^3.0.2",
-        "nprogress": "0.2.0",
         "serve": "6.0.6",
         "style-loader": "0.18.2",
         "uglifyjs-webpack-plugin": "^1.1.6",

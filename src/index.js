@@ -10,7 +10,7 @@ export function loadAxiosProgress(config) {
     let _requestsCounter = 0;
 
     const setupStartProgress = () => {
-        axios.interceptors.request.use(config => {
+        axios.interceptors.request.use((config) => {
             _requestsCounter++;
             NProgress.start();
 
@@ -24,24 +24,24 @@ export function loadAxiosProgress(config) {
     };
 
     const setupStopProgress = () => {
-        const responseFunc = response => {
+        const responseFunc = (response) => {
             if ((--_requestsCounter) === 0) {
                 NProgress.done();
             }
 
             return response;
-        }
+        };
 
-        const errorFunc = error => {
+        const errorFunc = (error) => {
             if ((--_requestsCounter) === 0) {
                 NProgress.done();
             }
 
             return Promise.reject(error);
-        }
+        };
 
         axios.interceptors.response.use(responseFunc, errorFunc);
-    }
+    };
 
     NProgress.configure(config);
     setupStartProgress();

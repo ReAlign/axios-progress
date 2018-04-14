@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "build": "webpack --progress",
+        "lint": "eslint --ext .js src",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "lint-staged": {
@@ -19,10 +20,14 @@
     "devDependencies": {
         "babel-core": "^6.26.0",
         "babel-loader": "^7.1.2",
+        "babel-eslint": "^7.1.1",
         "babel-preset-es2015": "^6.24.1",
         "babel-preset-stage-1": "^6.24.1",
         "eslint": "^3.19.0",
         "eslint-config-kaola": "^0.1.3",
+        "eslint-friendly-formatter": "^2.0.7",
+        "eslint-loader": "^1.7.1",
+        "eslint-plugin-html": "^2.0.0",
         "husky": "^0.13.4",
         "lint-staged": "^3.6.1",
         "css-loader": "^0.28.7",
